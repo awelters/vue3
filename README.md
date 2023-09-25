@@ -52,7 +52,7 @@ https://vuejs.org/api/sfc-script-setup.html#script-setup
 - [Vue Router](https://router.vuejs.org/)
 - [Pinia](https://pinia.vite.net/) for easier and type safe state handling
 - [Eslint](https://eslint.org/) with some additional plugins and rules for high code quality
-- [Jest](https://jestjs.io/) for unit testing with [Vue Testing Library](https://testing-library.com/docs/vue-testing-library/intro)
+- [Vitest](https://vitest.dev/) for unit testing with [Vue Testing Library](https://testing-library.com/docs/vue-testing-library/intro)
 - [Cypress](https://www.cypress.io/) for E2E testing
 
 ## For better code quality
@@ -95,12 +95,6 @@ npm run lint
 
 ```
 npm run test:unit
-```
-
-## Run Unit Tests w/ Coverage
-
-```
-npm run test:unit-with-coverage
 ```
 
 ## Open E2E Tests

@@ -36,7 +36,7 @@ module.exports = {
       'error',
       {
         alphabetize: { order: 'asc', caseInsensitive: true },
-        'newlines-between': 'always',
+        'newlines-between': 'never',
         pathGroups: [
           {
             pattern: '@/**',

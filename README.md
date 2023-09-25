@@ -1,4 +1,4 @@
-# Vite + Vue 3 + Typescript + Vue Router + Pinia + Eslint + Jest + Cypress
+# Vite + Vue 3 + Typescript + Vue Router + Pinia + Eslint + Vitest + Cypress
 
 A [Vite](https://vitejs.dev/) scaffolded project with Vite + Vue 3 + Typescript + Vue Router + Pinia + Eslint + Jest + Cypress template extended with some useful tools which are included in a VUE CLI project. To scaffold your own based on this template
 `npx degit awelters/vue3 vue3`

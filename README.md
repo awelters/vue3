@@ -60,3 +60,69 @@ https://vuejs.org/api/sfc-script-setup.html#script-setup
 The following areas got some improvements (besides using the recommended ESLint rules):
 - Module imports (restricted paths, group organization, alphabetical order, removal of unused modules)
 - Promise and async/await (enforcing `catch` statements, enforcing param names and order in promise executor, enforcing using `await` in `async` functions)
+
+## Installation
+
+```
+npm i
+```
+
+## Run in dev mode locally (http) with hot reload
+
+```
+npm run dev
+```
+
+## Run in dev mode locally (https) with hot reload
+
+```
+npm run dev-https
+```
+
+## Type checking live (run in another terminal with the previous run in dev mode locally options)
+
+```
+npm run dev-type-check
+```
+
+## Lint (--fix option to automatically fix if possible)
+
+```
+npm run lint
+```
+
+## Run Unit Tests
+
+```
+npm run test:unit
+```
+
+## Run Unit Tests w/ Coverage
+
+```
+npm run test:unit-with-coverage
+```
+
+## Open E2E Tests
+
+```
+npm run test:e2e:local
+```
+
+## Run E2E Tests
+
+```
+npm run test:e2e
+```
+
+## Build for production
+
+```
+npm run build
+```
+
+## Preview build for production (after building for production)
+
+```
+npm run preview
+```

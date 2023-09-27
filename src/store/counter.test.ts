@@ -13,4 +13,14 @@ describe('Counter', () => {
     increment()
     expect(counterStore.count).toBe(1)
   })
+  it('decrement count', () => {
+    // Destructuring refs and computed props breaks reactivity but actions can be safely extracted
+    // https://pinia.vuejs.org/core-concepts/#using-the-store
+    setActivePinia(createPinia())
+    const counterStore = useCounterStore()
+    const { decrement } = counterStore
+    expect(counterStore.count).toBe(0)
+    decrement()
+    expect(counterStore.count).toBe(-1)
+  })
 })

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-
 import { useCounterStore } from '@/store/counter'
 
 const counterStore = useCounterStore()
@@ -8,13 +7,14 @@ const counterStore = useCounterStore()
 defineProps<{ msg: string }>()
 
 const count = ref(0)
+const increment = () => (count.value++)
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
 
   <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
+    <button type="button" @click="increment">count is {{ count }}</button>
     <h3>Store counter: {{ counterStore.count }}</h3>
     <p>
       Edit

@@ -1,9 +1,12 @@
+import { createPinia, setActivePinia } from 'pinia'
+import { describe, it, expect  } from 'vitest'
 import { useCounterStore } from '@/store/counter'
 
 describe('Counter', () => {
   it('increments count', () => {
     // Destructuring refs and computed props breaks reactivity but actions can be safely extracted
     // https://pinia.vuejs.org/core-concepts/#using-the-store
+    setActivePinia(createPinia())
     const counterStore = useCounterStore()
     const { increment } = counterStore
     expect(counterStore.count).toBe(0)

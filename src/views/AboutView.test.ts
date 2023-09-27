@@ -9,9 +9,12 @@ describe('AboutView.vue', () => {
   beforeEach(() => {
     wrapper = mount(AboutView, { global: {
       plugins: [createTestingPinia({
+        stubActions: false,
         createSpy: vi.fn,
         initialState: {
-          counter: 15
+          counter: {
+            count: 15
+          }
         }
       })]
     }, 
@@ -21,9 +24,9 @@ describe('AboutView.vue', () => {
   it('should call the increment action', async () => {
     const store = useCounterStore()
     vi.spyOn(store, 'increment')
-    expect(store.count).toBe(0)
     const button = wrapper.find('button')
     await button.trigger('click')
     expect(store.increment).toHaveBeenCalledOnce()
+    expect(wrapper.text()).toContain('store count is 16')
   })
 })

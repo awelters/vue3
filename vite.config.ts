@@ -1,5 +1,4 @@
 import { resolve } from 'path'
-
 import basicSsl from '@vitejs/plugin-basic-ssl'
 import legacy from '@vitejs/plugin-legacy'
 import vue from '@vitejs/plugin-vue'

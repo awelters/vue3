@@ -13,7 +13,7 @@
     "dev:type-check": "vue-tsc --noEmit --watch",
     "lint": "eslint . --ext vue,ts,js --max-warnings 0 --fix",
     "preview": "vite preview",
-    "test:unit:dev": "vitest --coverage",
+    "dev:test:unit": "vitest --coverage",
     "test:unit": "vitest run --coverage",
     "test:e2e:local": "cypress open",
     "test:e2e": "cypress run --browser chrome"

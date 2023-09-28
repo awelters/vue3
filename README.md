@@ -94,7 +94,7 @@ npm run lint
 ## Run Unit Tests with coverage and hot reload
 
 ```
-npm run test:unit:dev
+npm run dev:test:unit
 ```
 
 ## Run Unit Tests with coverage (typical use is in CI/CD pipelines)

@@ -76,34 +76,40 @@ npm run dev
 ## Run in dev mode locally (https) with hot reload
 
 ```
-npm run dev-https
+npm run dev:https
 ```
 
 ## Type checking live (run in another terminal with the previous run in dev mode locally options)
 
 ```
-npm run dev-type-check
+npm run dev:type-check
 ```
 
-## Lint (--fix option to automatically fix if possible)
+## Lint w/ fixing
 
 ```
 npm run lint
 ```
 
-## Run Unit Tests
+## Run Unit Tests with coverage and hot reload
+
+```
+npm run test:unit:dev
+```
+
+## Run Unit Tests with coverage (typical use is in CI/CD pipelines)
 
 ```
 npm run test:unit
 ```
 
-## Open E2E Tests
+## Open E2E Tests (opens Cypress UI)
 
 ```
 npm run test:e2e:local
 ```
 
-## Run E2E Tests
+## Run E2E Tests in headless mode (typical use is in CI/CD pipelines)
 
 ```
 npm run test:e2e

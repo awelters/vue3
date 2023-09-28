@@ -22,7 +22,7 @@ export default ({ mode }) => {
     console.log('App title', env.VITE_APP_TITLE)
 
     // only use the basic ssl plugin if using the right script
-    if( env.npm_lifecycle_event === 'dev-https' ) {
+    if( env.npm_lifecycle_event === 'dev:https' ) {
       plugins.push(basicSsl())
     }
   }

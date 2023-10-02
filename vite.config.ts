@@ -1,4 +1,4 @@
-import { resolve } from 'path'
+import { fileURLToPath, URL } from 'node:url'
 import basicSsl from '@vitejs/plugin-basic-ssl'
 import legacy from '@vitejs/plugin-legacy'
 import vue from '@vitejs/plugin-vue'
@@ -14,7 +14,7 @@ export default ({ mode }) => {
   const plugins:PluginOption = [
     vue(),
     legacy({
-      targets: ['defaults', 'IE 11'],
+      targets: ['defaults', 'IE 11'], // IE 11 won't really work with vue 3 just using it as an example showing the legacy plugin chugging along outputting files when you build this project
   })]
 
   // do development specific tasks
@@ -22,7 +22,7 @@ export default ({ mode }) => {
     console.log('App title', env.VITE_APP_TITLE)
 
     // only use the basic ssl plugin if using the right script
-    if( env.npm_lifecycle_event === 'dev:https' ) {
+    if( env.npm_lifecycle_event === 'dev-https' ) {
       plugins.push(basicSsl())
     }
   }
@@ -32,7 +32,7 @@ export default ({ mode }) => {
     plugins: plugins,
     resolve: {
       alias: {
-        '@': resolve(__dirname, 'src')
+        '@': fileURLToPath(new URL('./src', import.meta.url))
       }
     }
   })

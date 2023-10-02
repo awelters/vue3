@@ -1,75 +1,25 @@
+/* eslint-env node */
+require('@rushstack/eslint-patch/modern-module-resolution')
+
 module.exports = {
   root: true,
-  env: {
-    node: true
-  },
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
+  'extends': [
     'plugin:vue/vue3-essential',
-    '@vue/eslint-config-typescript/recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings',
-    'plugin:import/typescript',
-    'plugin:promise/recommended'
+    'eslint:recommended',
+    '@vue/eslint-config-typescript',
+    '@vue/eslint-config-prettier/skip-formatting'
   ],
-  plugins: ['unused-imports', 'promise'],
-  settings: {
-    'import/resolver': {
-      alias: {
-        map: [['@', './src/']],
-        extensions: ['.ts', '.js', '.vue']
-      }
-    }
-  },
-  parserOptions: {
-    ecmaVersion: 2020
-  },
-  rules: {
-    'require-await': 'error',
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'unused-imports/no-unused-imports': 'error',
-    'import/first': 'error',
-    'import/order': [
-      'error',
-      {
-        alphabetize: { order: 'asc', caseInsensitive: true },
-        'newlines-between': 'never',
-        pathGroups: [
-          {
-            pattern: '@/**',
-            group: 'external',
-            position: 'after'
-          }
-        ]
-      }
-    ],
-    'no-restricted-imports': [
-      'error',
-      {
-        patterns: [
-          // no relative imports allowed, always use alias, it makes easier to move files later if necessary
-          './**',
-          '../**'
-        ]
-      }
-    ],
-    '@typescript-eslint/no-unused-vars': 'error'
-  },
   overrides: [
     {
-      files: ['**/__tests__/*.{j,t}s?(x)', '**/tests/unit/**/*.spec.{j,t}s?(x)'],
-      env: {
-        jest: true
-      }
-    },
-    {
-      files: ['tests/**/*.ts'],
-      rules: {
-        'no-restricted-imports': 'off'
-      }
+      files: [
+        'cypress/e2e/**/*.{cy,spec}.{js,ts,jsx,tsx}'
+      ],
+      'extends': [
+        'plugin:cypress/recommended'
+      ]
     }
-  ]
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest'
+  }
 }

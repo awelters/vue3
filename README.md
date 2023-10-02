@@ -1,6 +1,6 @@
-# Vite + Vue 3 + Typescript + Vue Router + Pinia + Eslint + Vitest + Cypress
+# Vite + Vue 3 + Typescript + Vue Router + Pinia + Eslint + Prettier + Vitest + Cypress
 
-A [Vite](https://vitejs.dev/) scaffolded project with Vite + Vue 3 + Typescript + Vue Router + Pinia + Eslint + Vitest + Cypress template extended with some useful tools which are included in a VUE CLI project. To scaffold your own based on this template
+A [Vite](https://vitejs.dev/) scaffolded project with Vite + Vue 3 + Typescript + Vue Router + Pinia + Eslint + Vitest + Cypress template extended with some useful tools. To scaffold your own based on this template
 `npx degit awelters/vue3 vue3`
 
 ## Why Vite?
@@ -51,15 +51,14 @@ https://vuejs.org/api/sfc-script-setup.html#script-setup
 
 - [Vue Router](https://router.vuejs.org/)
 - [Pinia](https://pinia.vite.net/) for easier and type safe state handling
-- [Eslint](https://eslint.org/) with some additional plugins and rules for high code quality
+- [Eslint](https://eslint.org/) with rules for high code quality
+- [Prettier](https://prettier.io/) for formatting code in an opinonated way
 - [Vitest](https://vitest.dev/) for unit testing
 - [Cypress](https://www.cypress.io/) for E2E testing
 
-## For better code quality
+## Recommended IDE Setup
 
-The following areas got some improvements (besides using the recommended ESLint rules):
-- Module imports (restricted paths, group organization, alphabetical order, removal of unused modules)
-- Promise and async/await (enforcing `catch` statements, enforcing param names and order in promise executor, enforcing using `await` in `async` functions)
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
 ## Installation
 
@@ -76,13 +75,7 @@ npm run dev
 ## Run in dev mode locally (https) with hot reload
 
 ```
-npm run dev:https
-```
-
-## Type checking live (run in another terminal with the previous run in dev mode locally options)
-
-```
-npm run dev:type-check
+npm run dev-https
 ```
 
 ## Lint w/ fixing
@@ -91,10 +84,16 @@ npm run dev:type-check
 npm run lint
 ```
 
+## Formate code using Prettier
+
+```
+npm run format
+```
+
 ## Run Unit Tests with coverage and hot reload
 
 ```
-npm run dev:test:unit
+npm run test:unit:dev
 ```
 
 ## Run Unit Tests with coverage (typical use is in CI/CD pipelines)
@@ -112,10 +111,11 @@ npm run test:e2e:local
 ## Run E2E Tests in headless mode (typical use is in CI/CD pipelines)
 
 ```
+npm run build
 npm run test:e2e
 ```
 
-## Build for production
+## Type-Check and build for production
 
 ```
 npm run build

@@ -7,18 +7,22 @@ import AboutView from '@/views/AboutView.vue'
 describe('AboutView.vue', () => {
   let wrapper: VueWrapper
   beforeEach(() => {
-    wrapper = mount(AboutView, { global: {
-      plugins: [createTestingPinia({
-        stubActions: false,
-        createSpy: vi.fn,
-        initialState: {
-          counter: {
-            count: 15
-          }
-        }
-      })]
-    }, 
-    props: { msg: 'Hello Vitest' } })
+    wrapper = mount(AboutView, {
+      global: {
+        plugins: [
+          createTestingPinia({
+            stubActions: false,
+            createSpy: vi.fn,
+            initialState: {
+              counter: {
+                count: 15
+              }
+            }
+          })
+        ]
+      },
+      props: { msg: 'Hello Vitest' }
+    })
   })
 
   it('should call the increment action', async () => {

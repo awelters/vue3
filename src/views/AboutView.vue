@@ -1,7 +1,9 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-    <button type="button" @click="counterStore.increment">store count is {{ counterStore.count }}</button>
+    <button type="button" @click="counterStore.increment">
+      store count is {{ counterStore.count }}
+    </button>
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 import { createTestingPinia } from '@pinia/testing'
 import { mount } from '@vue/test-utils'
 import { describe, it, expect, vi } from 'vitest'
-import HelloWorld from '@/components/HelloWorld.vue'
+import HelloWorld from '@/components/HelloWorldCompositionAPI.vue'
 
 describe('HelloWorld', () => {
   it('renders properly', () => {

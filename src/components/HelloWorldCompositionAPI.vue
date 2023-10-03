@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { useCounterStore } from '@/store/counter'
 
 const counterStore = useCounterStore()
@@ -7,6 +7,7 @@ const counterStore = useCounterStore()
 defineProps<{ msg: string }>()
 
 const count = ref(0)
+const doubleCount = computed(() => count.value * 2)
 const increment = () => count.value++
 </script>
 
@@ -15,24 +16,13 @@ const increment = () => count.value++
 
   <div class="card">
     <button type="button" @click="increment">count is {{ count }}</button>
+    <h3>count doubled is: {{ doubleCount }}</h3>
     <h3>Store counter: {{ counterStore.count }}</h3>
     <p>
       Edit
-      <code>components/HelloWorld.vue</code> to test HMR
+      <code>components/HelloWorldCompositionAPI.vue</code> to test HMR
     </p>
   </div>
-
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>, the
-    official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 
 <style scoped>

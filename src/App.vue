@@ -1,12 +1,8 @@
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from '@/components/HelloWorld.vue'
-</script>
-
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
+    <router-link to="/compositionapi">Composition API Example</router-link> |
+    <router-link to="/optionsapi">Options API Example</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
   <router-view />
@@ -18,7 +14,6 @@ import HelloWorld from '@/components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>

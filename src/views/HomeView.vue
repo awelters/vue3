@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <h1>{{ $t('welcome') }}</h1>
     <p>
       Check out
       <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>, the

@@ -1,6 +1,6 @@
-# Vite + Vue 3 + Typescript + Vue Router + Pinia + Eslint + Prettier + Vitest + Cypress
+# Vite + Vue 3 + Typescript + Vue Router + Pinia + Vue I18n + Eslint + Prettier + Vitest + Cypress
 
-A [Vite](https://vitejs.dev/) scaffolded project with Vite + Vue 3 + Typescript + Vue Router + Pinia + Eslint + Vitest + Cypress template extended with some useful tools. To scaffold your own based on this template
+A [Vite](https://vitejs.dev/) scaffolded project with Vite + Vue 3 + Typescript + Vue Router + Pinia + Vue I18n + Eslint + Prettier + Vitest + Cypress template extended with some useful tools. To scaffold your own based on this template
 `npx degit awelters/vue3 vue3`
 
 ## Why Vite?
@@ -51,6 +51,7 @@ https://vuejs.org/api/sfc-script-setup.html#script-setup
 
 - [Vue Router](https://router.vuejs.org/)
 - [Pinia](https://pinia.vite.net/) for easier and type safe state handling
+- [Vue I18n](https://vue-i18n.intlify.dev/) for easy internationalization
 - [Eslint](https://eslint.org/) with rules for high code quality
 - [Prettier](https://prettier.io/) for formatting code in an opinonated way
 - [Vitest](https://vitest.dev/) for unit testing

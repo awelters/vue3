@@ -1,7 +1,9 @@
 import { fileURLToPath, URL } from 'node:url'
+import path from 'path'
 import basicSsl from '@vitejs/plugin-basic-ssl'
 import legacy from '@vitejs/plugin-legacy'
 import vue from '@vitejs/plugin-vue'
+import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import { ConfigEnv, defineConfig, loadEnv, PluginOption } from 'vite'
 
 export default ({ mode }:ConfigEnv) => {
@@ -13,8 +15,11 @@ export default ({ mode }:ConfigEnv) => {
 
   const plugins:PluginOption = [
     vue(),
+    VueI18nPlugin({
+      include: [path.resolve(__dirname, './src/locales/**')],
+    }),
     legacy({
-      targets: ['defaults', 'IE 11'], // IE 11 won't really work with vue 3 just using it as an example showing the legacy plugin chugging along outputting files when you build this project
+      targets: ['defaults', 'not IE 11']
   })]
 
   // do development specific tasks

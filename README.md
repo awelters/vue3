@@ -7,7 +7,7 @@ A [Vite](https://vitejs.dev/) scaffolded project with Vite + Vue 3 + Typescript 
 Long story short, slow start and update times for the serve when developing. Uses native ESM based dev server vs bundle based dev server. Read more about it here: https://vitejs.dev/guide/why.html#why-vite
 
 ## Options API vs Composition API
-This template will use both the Options API (TODO) and Composition API to demonstrate both. The Options API is implemented on top of the Composition API. Tip: While Vue does support TypeScript usage with Options API, it is recommended to use Vue with TypeScript via Composition API as it offers simpler, more efficient and more robust type inference.
+This template will use both the Options API and Composition API to demonstrate both. The Options API is implemented on top of the Composition API. Tip: While Vue does support TypeScript usage with Options API, it is recommended to use Vue with TypeScript via Composition API as it offers simpler, more efficient and more robust type inference.
 
 The Options API is centered around the concept of a "component instance", which typically aligns better with a class-based mental model for users coming from OOP language backgrounds. It is also more beginner-friendly by abstracting away the reactivity details and enforcing code organization via option groups.
 

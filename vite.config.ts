@@ -2,9 +2,9 @@ import { fileURLToPath, URL } from 'node:url'
 import basicSsl from '@vitejs/plugin-basic-ssl'
 import legacy from '@vitejs/plugin-legacy'
 import vue from '@vitejs/plugin-vue'
-import { defineConfig, loadEnv, PluginOption } from 'vite'
+import { ConfigEnv, defineConfig, loadEnv, PluginOption } from 'vite'
 
-export default ({ mode }) => {
+export default ({ mode }:ConfigEnv) => {
   // Load app-level env vars to node-level env vars.
   const env = {
     ...process.env,

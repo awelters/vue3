@@ -2,5 +2,5 @@
 import HelloWorld from '@/components/HelloWorldOptionsAPI.vue'
 </script>
 <template>
-  <HelloWorld msg="Vite + Vue" />
+  <HelloWorld msg="Vite + Vue + Options API" />
 </template>

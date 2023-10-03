@@ -60,69 +60,92 @@ https://vuejs.org/api/sfc-script-setup.html#script-setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Installation
+## Install Node Version Manager
+
+### Mac/Linux
+
+https://github.com/nvm-sh/nvm#installing-and-updating
+
+### Windows
+
+https://github.com/coreybutler/nvm-windows/releases
+
+## Use Node LTS (as of 10/3/2023)
 
 ```
-npm i
+nvm install 18.18.0
+nvm use 18.18.0
+```
+
+## Installation Yarn Package Manager (v1)
+
+```
+npm install --global yarn
+```
+
+## Installation Project Dependencies
+
+```
+yarn install
 ```
 
 ## Run in dev mode locally (http) with hot reload
 
 ```
-npm run dev
+yarn dev
 ```
 
 ## Run in dev mode locally (https) with hot reload
 
 ```
-npm run dev-https
+yarn dev-https
 ```
 
 ## Lint w/ fixing
 
 ```
-npm run lint
+yarn lint
 ```
 
 ## Formate code using Prettier
 
 ```
-npm run format
+yarn format
 ```
 
 ## Run Unit Tests with coverage and hot reload
 
 ```
-npm run test:unit:dev
+yarn test:unit:dev
 ```
 
 ## Run Unit Tests with coverage (typical use is in CI/CD pipelines)
 
 ```
-npm run test:unit
+yarn test:unit
 ```
 
 ## Open E2E Tests (opens Cypress UI)
 
 ```
-npm run test:e2e:local
+yarn test:e2e:local
 ```
 
 ## Run E2E Tests in headless mode (typical use is in CI/CD pipelines)
 
 ```
-npm run build
-npm run test:e2e
+yarn build
+yarn test:e2e
 ```
 
 ## Type-Check and build for production
 
 ```
-npm run build
+yarn build
 ```
 
 ## Preview build for production (after building for production)
 
 ```
-npm run preview
+yarn preview
 ```

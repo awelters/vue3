@@ -1,12 +1,27 @@
 # Vite + Vue 3 + Typescript + Vue Router + Pinia + Vue I18n + Eslint + Prettier + Vitest + Cypress
 
-A [Vite](https://vitejs.dev/) scaffolded project with Vite + Vue 3 + Typescript + Vue Router + Pinia + Vue I18n + Eslint + Prettier + Vitest + Cypress template extended with some useful tools. To scaffold your own based on this template
+A [Vite](https://vitejs.dev/) scaffolded project with Vite + Vue 3 + Typescript + Vue Router + Pinia + Vue I18n + Eslint + Prettier + Vitest + Cypress template extended with some useful tools and includes support for legacy browsers as well as internalization. To scaffold your own based on this template
 `npx degit awelters/vue3 vue3`
+
+## Motivation
+
+The reason this template exists is to make it fast and easy to scaffold new projects and develop the highest quality frontend web user interfaces using the best and fastest build tools, frameworks, and libraries. The goal is to make it easy for individuals, small dev teams, and even large software engineering groups with dev/testers/QA folks to craft scalable applications using modern best practices. The goal is to minimize the number of dependencies while also allowing people to build apps for as many browsers as possible with a global audience in mind. Another goal was to make it easy to collaborate and ensure quality with code style formatting, static typing, static code analysis, unit and browser testing.
 
 ## Why Vite?
 Long story short, slow start and update times for the serve when developing. Uses native ESM based dev server vs bundle based dev server. Read more about it here: https://vitejs.dev/guide/why.html#why-vite
 
-## Options API vs Composition API
+## Links to some libraries used
+
+- [Vue Router](https://router.vuejs.org/)
+- [Pinia](https://pinia.vite.net/) for easier and type safe state handling
+- [Vue I18n](https://vue-i18n.intlify.dev/) for easy internationalization
+- [Eslint](https://eslint.org/) with rules for high code quality
+- [Prettier](https://prettier.io/) for formatting code in an opinonated way
+- [Vitest](https://vitest.dev/) for unit testing
+- [Cypress](https://www.cypress.io/) for E2E testing
+
+
+## Vue 3 Options API vs Composition API
 This template will use both the Options API and Composition API to demonstrate both. The Options API is implemented on top of the Composition API. Tip: While Vue does support TypeScript usage with Options API, it is recommended to use Vue with TypeScript via Composition API as it offers simpler, more efficient and more robust type inference.
 
 The Options API is centered around the concept of a "component instance", which typically aligns better with a class-based mental model for users coming from OOP language backgrounds. It is also more beginner-friendly by abstracting away the reactivity details and enforcing code organization via option groups.
@@ -23,16 +38,7 @@ Go with Options API if you are not using build tools, or plan to use Vue primari
 
 Go with Composition API + Single-File Components if you plan to build full applications with Vue.
 
-## `<script setup>`
-
-`<script setup>` is a compile-time syntactic sugar for using Composition API inside Single-File Components (SFCs). It is the recommended syntax if you are using both SFCs and Composition API. It provides a number of advantages over the normal `<script>` syntax:
-
-* More succinct code with less boilerplate
-* Ability to declare props and emitted events using pure TypeScript
-* Better runtime performance (the template is compiled into a render function in the same scope, without an intermediate proxy)
-* Better IDE type-inference performance (less work for the language server to extract types from code)
-
-## Further Reading:
+#### Further Reading:
 
 https://vuejs.org/guide/introduction.html#api-styles
 
@@ -42,20 +48,20 @@ https://vuejs.org/guide/typescript/options-api.html
 
 https://vuejs.org/guide/typescript/composition-api.html
 
+## `<script setup>`
+
+`<script setup>` is a compile-time syntactic sugar for using Composition API inside Single-File Components (SFCs). It is the recommended syntax if you are using both SFCs and Composition API. It provides a number of advantages over the normal `<script>` syntax:
+
+* More succinct code with less boilerplate
+* Ability to declare props and emitted events using pure TypeScript
+* Better runtime performance (the template is compiled into a render function in the same scope, without an intermediate proxy)
+* Better IDE type-inference performance (less work for the language server to extract types from code)
+
+#### Further Reading:
+
 https://vuejs.org/api/sfc-spec.html#sfc-syntax-specification
 
 https://vuejs.org/api/sfc-script-setup.html#script-setup
-
-
-## Links to some libraries used
-
-- [Vue Router](https://router.vuejs.org/)
-- [Pinia](https://pinia.vite.net/) for easier and type safe state handling
-- [Vue I18n](https://vue-i18n.intlify.dev/) for easy internationalization
-- [Eslint](https://eslint.org/) with rules for high code quality
-- [Prettier](https://prettier.io/) for formatting code in an opinonated way
-- [Vitest](https://vitest.dev/) for unit testing
-- [Cypress](https://www.cypress.io/) for E2E testing
 
 ## Recommended IDE Setup
 
@@ -150,3 +156,9 @@ yarn build
 ```
 yarn preview
 ```
+
+## Credits
+
+[John Evans](https://github.com/evanjo03) and [Christine Woolf](https://github.com/evanjo03) for great advice and getting this template working right
+
+[Create-vue](https://github.com/vuejs/create-vue) as the starting scaffolding for this template

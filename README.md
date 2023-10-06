@@ -204,6 +204,6 @@ yarn preview
 
 ## Credits
 
-[John Evans](https://github.com/evanjo03) and [Christine Woolf](https://github.com/evanjo03) for great advice and getting this template working right
+[John Evans](https://github.com/evanjo03), [Christine Woolf](https://github.com/evanjo03), and [David LaTour](https://github.com/splayfee) for great advice and getting this template working right
 
 [Create-vue](https://github.com/vuejs/create-vue) as the starting scaffolding for this template

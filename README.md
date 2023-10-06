@@ -20,7 +20,6 @@ Long story short, slow start and update times for the serve when developing. Use
 - [Vitest](https://vitest.dev/) for unit testing
 - [Cypress](https://www.cypress.io/) for E2E testing
 
-
 ## Vue 3 Options API vs Composition API
 This template will use both the Options API and Composition API to demonstrate both. The Options API is implemented on top of the Composition API. Tip: While Vue does support TypeScript usage with Options API, it is recommended to use Vue with TypeScript via Composition API as it offers simpler, more efficient and more robust type inference.
 
@@ -62,6 +61,52 @@ https://vuejs.org/guide/typescript/composition-api.html
 https://vuejs.org/api/sfc-spec.html#sfc-syntax-specification
 
 https://vuejs.org/api/sfc-script-setup.html#script-setup
+
+## Why Pinia vs Vuex?
+
+From Vuex website:
+> Pinia has almost the exact same or enhanced API as Vuex 5, described in Vuex 5 RFC. You could simply consider Pinia as Vuex 5 with a different name. Pinia also works with Vue 2.x as well. 
+
+> Vuex 3 and 4 will still be maintained. Vuex 3 and 4 will still be maintained. However, it's unlikely to add new functionalities to it.
+
+### Pinia bonus features:
+
+* mutations no longer exist. They were often perceived as extremely verbose. They initially brought devtools integration but that is no longer an issue.
+
+* No need to create custom complex wrappers to support TypeScript, everything is typed and the API is designed in a way to leverage TS type inference as much as possible.
+
+* No more magic strings to inject, import the functions, call them, enjoy autocompletion!
+
+* No need to dynamically add stores, they are all dynamic by default and you won't even notice. Note you can still manually use a store to register it whenever you want but because it is automatic you don't need to worry about it.
+
+* No more nested structuring of modules. You can still nest stores implicitly by importing and using a store inside another but Pinia offers a flat structuring by design while still enabling ways of cross composition among stores. You can even have circular dependencies of stores.
+
+* No namespaced modules. Given the flat architecture of stores, "namespacing" stores is inherent to how they are defined and you could say all stores are namespaced.
+
+* Devtools support
+    * A timeline to track actions, mutations
+    * Stores appear in components where they are used
+    * Time travel and easier debugging
+
+* Hot module replacement
+    * Modify your stores without reloading your page
+    * Keep any existing state while developing
+
+* Plugins: extend Pinia features with plugins
+
+* Proper TypeScript support or autocompletion for JS users
+
+* Server Side Rendering Support
+
+#### Further Reading:
+
+https://vuex.vuejs.org/#what-is-vuex
+
+https://pinia.vuejs.org/introduction.html#comparison-with-vuex
+
+https://pinia.vuejs.org/introduction.html#Comparison-with-Vuex-3-x-4-x
+
+https://pinia.vuejs.org/cookbook/migration-vuex.html
 
 ## Recommended IDE Setup
 

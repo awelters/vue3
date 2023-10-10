@@ -12,8 +12,9 @@ Long story short, slow start and update times for the serve when developing. Use
 
 ## Links to some libraries used
 
-- [Vue Router](https://router.vuejs.org/)
-- [Pinia](https://pinia.vite.net/) for easier and type safe state handling
+- [Vue 3](https://vuejs.org/) for building web user interfaces using an approachable, performant and versatile framework
+- [Vue Router](https://router.vuejs.org/) for convenient routing
+- [Pinia](https://pinia.vuejs.org/) for easier and type safe state handling
 - [Vue I18n](https://vue-i18n.intlify.dev/) for easy internationalization
 - [Eslint](https://eslint.org/) with rules for high code quality
 - [Prettier](https://prettier.io/) for formatting code in an opinonated way

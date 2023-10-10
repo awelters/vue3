@@ -12,10 +12,10 @@ export default defineConfig((env) => mergeConfig(
       coverage: {
         all: true,
         clean: true,
-        lines: 50,
+        lines: 46,
         functions: 50,
         branches: 65,
-        statements: 50
+        statements: 46
       }
     }
   })

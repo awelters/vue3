@@ -1,10 +1,15 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { mapStores } from 'pinia'
 import { useCounterStore } from '@/store/counter'
 
 export default defineComponent({
-  // type inference enabled beccause of using defineComponent
+  setup() {
+    const counterStore = useCounterStore()
+
+    // **only return the whole store** instead of destructuring
+    return { counterStore }
+  },
+  // type inference enabled because of using defineComponent
   props: {
     msg: { type: String, required: true }
   },
@@ -14,8 +19,6 @@ export default defineComponent({
     }
   },
   computed: {
-    ...mapStores(useCounterStore),
-
     // explicitly annotate return type
     doubleCount(): number {
       return this.count * 2
@@ -43,9 +46,3 @@ export default defineComponent({
     </p>
   </div>
 </template>
-
-<style scoped>
-.read-the-docs {
-  color: #888;
-}
-</style>

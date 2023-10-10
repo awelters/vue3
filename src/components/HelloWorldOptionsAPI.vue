@@ -26,7 +26,7 @@ export default defineComponent({
   },
   methods: {
     // implicit return type
-    increment(): number {
+    increment() {
       return this.count++
     }
   }

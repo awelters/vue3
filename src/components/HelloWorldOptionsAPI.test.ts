@@ -25,10 +25,21 @@ describe('HelloWorldOptionsAPI', () => {
     expect(wrapper.text()).toContain('Store counter: 15')
   })
   it('increment', async () => {
-    const wrapper = mount(HelloWorld, { props: { msg: 'Hello Vitest' } })
+    const wrapper = mount(HelloWorld, {
+      global: {
+        plugins: [
+          createTestingPinia({
+            createSpy: vi.fn
+          })
+        ]
+      },
+      props: { msg: 'Hello Vitest' }
+    })
     expect(wrapper.text()).toContain('count is 0')
+    expect(wrapper.text()).toContain('Store counter: 0')
     const button = wrapper.find('button')
     await button.trigger('click')
     expect(wrapper.text()).toContain('count is 1')
+    expect(wrapper.text()).toContain('Store counter: 0')
   })
 })
